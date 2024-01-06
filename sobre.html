@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moz Assistentes</title>
+    <link rel="stylesheet" href="sobre.css">
+    <script src="nav.js" defer></script>
+    <link rel="stylesheet" href="Bootstrap/css/bootstrap.min.css">
+    <script src="Bootstrap/js/bootstrap.min.js" defer></script>
+    <script src="fontawesome/js/all.min.js" defer></script>
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <style>
+        body{
+            background-color: hsl(244, 43%, 33%);
+            
+        }
+        li a{
+            text-decoration: none;
+            color: aliceblue;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .action_btn{
+            text-decoration: none;
+        }
+        .navbar{
+            display: flex;
+            align-items: center;
+        }
+    </style>
+</head>
+<body class="">
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html">Moz Assistentes</a>
+            </div>
+            <ul class="links">
+                <li><a href="index.html">Incial  <i class="fas fa-home"></i></a></li>
+                <li><a href="or.html">Orçamento  <i class="fa-solid fa-bookmark"></i></a></li>
+                <li><a href="recom.html">Recomendações  <i class="fa-solid fa-envelope"></i></a></li>
+                <li><a href="sobre.html">Sobre  <i class="fa fa-info-circle me-1"></i></a></li>
+            </ul>
+            <a href="" class="action_btn">Comece</a>
+
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div> 
+        </div>  
+            <div class="dropdown_menu">
+                <li><a href="index.html">Incial  <i class="fas fa-home"></i></a></li>
+                <li><a href="or.html">Orçamento  <i class="fa-solid fa-bookmark"></i></a></li>
+                <li><a href="recom.html">Recomendações  <i class="fa-solid fa-envelope"></i></a></li>
+                <li><a href="sobre.html">Sobre  <i class="fa fa-info-circle me-1"></i></a></li>
+                <li>
+                    <a href="or.html" class="action_btn">Comece</a>
+                </li>
+            </div>
+    </header>
+   
+    <main class="container" >
+       <!-- Sobre -->
+  <section id="about" class="py-5">
+    <div class="container" >
+      <h2 class="text-center text-light mb-4">Sobre Nossa Empresa</h2>
+      <p class="lead" style="color: orangered;">+258 Assistentes! É uma colabaração de vários profissionais e fornecedores de productos e serviços em diversos ramos da tecnologia</p>
+    </div>
+  </section>
+
+  <!-- Serviços -->
+  <section id="services" class="py-5 bg-light" style="background-color: coral;">
+    <div class="container " >
+      <h2 class="text-center mb-4">Nossos Serviços</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Material informáctico</h5>
+              <p class="card-text">Fornecemos, Instalamos e fazemos Manutenção de diversos materiais tecnológicos.</p>
+              <a href="or.html" class="btn btn-primary"> comece</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Desenvolvimento de Sistemas e Websites</h5>
+              <p class="card-text">Temos desenvolvedores de sistemas específicos (linguagens actuais e dinâmicas), e eficientes para sua empresa consoante a sua necessidade.</p>
+              <a href="or.html" class="btn btn-primary"> comece</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Analistas de sistemas & Redes</h5>
+              <p class="card-text">Analisamos de forma clara e objectiva qualquer sistema e ajudamos na sua administração de redes. </p>
+              <a href="or.html" class="btn btn-primary"> comece</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Cursos Particulares</h5>
+              <p class="card-text">Leccionamos e ajudamos aos estudantes de T.I e aos iniciantes nesta area a melhorar as suas habilidades e competências.</p>
+              <a href="or.html" class="btn btn-primary"> comece</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Depoimentos -->
+  <section id="testimonials" class="py-5">
+    <div class="container">
+      <h2 class="text-center text-light mb-4">Depoimentos dos Clientes</h2>
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <p class="lead text-center text-light">"Excelente empresa, ótimo atendimento e qualidade nos serviços prestados!"</p>
+            <p class="text-center text-light ">- Cliente Satisfeito 1</p>
+          </div>
+          <div class="carousel-item">
+            <p class="lead text-center text-light">"Recomendo a empresa, profissionais competentes e eficientes."</p>
+            <p class="text-center text-light ">- Cliente Satisfeito 2</p>
+          </div>
+          <!-- Adicione mais depoimentos conforme necessário -->
+        </div>
+        <!-- Controles do Carousel -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden text-light">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden text-light">Próximo</span>
+        </button>
+      </div>
+    </div>
+  </section>
+    </main>
+
+    <footer class="text-center text-light">
+        <p>&copy; 2024 <a href="index.html" style="color: orangered; ">Moz Assistentes</a>. Todos os direitos reservados.</p>
+      </footer>
+   
+</body>
+</html>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moz Assistentes</title>
+    <link rel="stylesheet" href="or.css">
+    <script src="nav.js" defer></script>
+    <link rel="stylesheet" href="Bootstrap/css/bootstrap.min.css">
+    <script src="Bootstrap/js/bootstrap.min.js" defer></script>
+    <script src="fontawesome/js/all.min.js" defer></script>
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <style>
+        body{
+            background-color: hsl(244, 43%, 33%);
+            
+        }
+        .container{
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            overflow: hidden;
+            border-radius: 10px;
+            
+        }
+        li a{
+            text-decoration: none;
+            color: aliceblue;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .action_btn{
+            text-decoration: none;
+        }
+        .navbar{
+            display: flex;
+            align-items: center;
+        }
+        button{
+            background-color: hsl(14, 91%, 50%);
+            padding: 10px 30px;
+            
+            color: white;
+            border: none;
+            margin-top: 20px;
+            border-radius: 10px;
+}
+        #form-Task {
+            z-index: 1; /* Certifica-se de que o formulário tem um índice de empilhamento maior que o menu toggle */
+        }
+
+        /* Adicione estilos específicos para garantir que o formulário não sobreponha o menu toggle, ajuste conforme necessário */
+        @media (max-width: 767px) {
+            #form-Task {
+                margin-top: 80px; /* Ajuste conforme necessário para garantir que o formulário não cubra o menu toggle */
+            }
+        }
+        form {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    input[type="text"], textarea {
+      margin-bottom: 10px;
+      padding: 10px;
+      width: 300px;
+    }
+    input[type="submit"] {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+    
+    .recommendations {
+      background-color: none;
+      color: #fff;
+      padding: 20px;
+      margin-top: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #555;
+      color: #fff;
+    }
+
+    .delete-button {
+      background-color: #d9534f;
+      color: #fff;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+    </style>
+</head>
+<body class="">
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html">Moz Assistentes</a>
+            </div>
+            <ul class="links">
+                <li><a href="index.html">Incial  <i class="fas fa-home"></i></a></li>
+                <li><a href="or.html">Orçamento  <i class="fa-solid fa-bookmark"></i></a></li>
+                <li><a href="recom.html">Recomendações  <i class="fa-solid fa-envelope"></i></a></li>
+                <li><a href="sobre.html">Sobre  <i class="fa fa-info-circle me-1"></i></a></li>
+            </ul>
+            <a href="" class="action_btn">Comece</a>
+
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div> 
+        </div>  
+            <div class="dropdown_menu" style="color: orangered;">
+                <li><a href="index.html">Incial  <i class="fas fa-home"></i></a></li>
+                <li><a href="or.html">Orçamento  <i class="fa-solid fa-bookmark"></i></a></li>
+                <li><a href="recom.html">Recomendações  <i class="fa-solid fa-envelope"></i></a></li>
+                <li><a href="sobre.html">Sobre  <i class="fa fa-info-circle me-1"></i></a></li>
+                <li>
+                    <a href="" class="action_btn">Comece</a>
+                </li>
+            </div>
+    </header>
+   
+   
+    
+            <h1 class="text-center text-light">Deixe sua Recomendação</h1>
+
+        <form id="recommendationForm">
+          <input type="text" id="name" placeholder="Seu nome" required>
+          <textarea id="recommendation" placeholder="Sua recomendação" required></textarea>
+          <input type="submit" value="Enviar Recomendação">
+        </form>
+
+        <div class="recommendations text-center text-light">
+          <h2>Recomendações dos Usuários</h2>
+          <table id="recommendationTable">
+            <thead>
+              <tr class="text-center">
+                <th class="text-center">Nome</th>
+                <th class="text-center">Descrição</th>
+                <th class="text-center">Ação</th>
+              </tr>
+            </thead>
+            <tbody id="recommendationList" class="text-center"></tbody>
+          </table>
+        </div>
+        
+        <footer class="text-center text-light">
+          <p>&copy; 2024 <a href="nav.html" style="color: orangered; ">Moz Assistentes</a>. Todos os direitos reservados.</p>
+        </footer>
+        
+        
+        <script>
+          document.getElementById("recommendationForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            var name = document.getElementById("name").value;
+            var recommendation = document.getElementById("recommendation").value;
+            var recommendationList = document.getElementById("recommendationList");
+        
+            var row = recommendationList.insertRow();
+            var cell1 = row.insertCell(0);
+            var cell2 = row.insertCell(1);
+            var cell3 = row.insertCell(2);
+        
+            cell1.textContent = name;
+            cell2.textContent = recommendation;
+        
+            var deleteButton = document.createElement("button");
+            deleteButton.textContent = "Deletar";
+            deleteButton.classList.add("delete-button");
+            cell3.appendChild(deleteButton);
+        
+            deleteButton.onclick = function() {
+              if (confirm("Tem certeza de que deseja excluir esta recomendação?")) {
+                row.remove();
+        
+                // Remover do armazenamento local
+                var savedRecommendations = JSON.parse(localStorage.getItem("userRecommendations")) || [];
+                savedRecommendations = savedRecommendations.filter(function(item) {
+                  return item.name !== name && item.recommendation !== recommendation;
+                });
+                localStorage.setItem("userRecommendations", JSON.stringify(savedRecommendations));
+              }
+            };
+        
+            // Salvar recomendação localmente
+            var savedRecommendations = JSON.parse(localStorage.getItem("userRecommendations")) || [];
+            savedRecommendations.push({ name: name, recommendation: recommendation });
+            localStorage.setItem("userRecommendations", JSON.stringify(savedRecommendations));
+        
+            // Limpar formulário
+            document.getElementById("recommendationForm").reset();
+          });
+        
+          // Carregar recomendações salvas localmente ao carregar a página
+          window.addEventListener("load", function() {
+            var savedRecommendations = JSON.parse(localStorage.getItem("userRecommendations")) || [];
+            var recommendationList = document.getElementById("recommendationList");
+        
+            savedRecommendations.forEach(function(recommendation) {
+              var row = recommendationList.insertRow();
+              var cell1 = row.insertCell(0);
+              var cell2 = row.insertCell(1);
+              var cell3 = row.insertCell(2);
+        
+              cell1.textContent = recommendation.name;
+              cell2.textContent = recommendation.recommendation;
+        
+              var deleteButton = document.createElement("button");
+              deleteButton.textContent = "Deletar";
+              deleteButton.classList.add("delete-button");
+              cell3.appendChild(deleteButton);
+        
+              deleteButton.onclick = function() {
+                if (confirm("Tem certeza de que deseja excluir esta recomendação?")) {
+                  row.remove();
+        
+                  // Remover do armazenamento local
+                  savedRecommendations = savedRecommendations.filter(function(item) {
+                    return item.name !== recommendation.name && item.recommendation !== recommendation.recommendation;
+                  });
+                  localStorage.setItem("userRecommendations", JSON.stringify(savedRecommendations));
+                }
+              };
+            });
+          });
+        </script>
+        
+
+
+    
+</body>
+</html>

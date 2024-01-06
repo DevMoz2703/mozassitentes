@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moz Assistentes</title>
+    <link rel="stylesheet" href="nav.css">
+    <script src="nav.js" defer></script>
+    <link rel="stylesheet" href="Bootstrap/css/bootstrap.min.css">
+    <script src="Bootstrap/js/bootstrap.min.js" defer></script>
+    <script src="fontawesome/js/all.min.js" defer></script>
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <style>
+        body{
+            background-color: hsl(244, 43%, 33%);
+            
+        }
+        li a{
+            text-decoration: none;
+            color: aliceblue;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .action_btn{
+            text-decoration: none;
+        }
+        .navbar{
+            display: flex;
+            align-items: center;
+        }
+    </style>
+</head>
+<body class="">
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html">Moz Assistentes</a>
+            </div>
+            <ul class="links">
+                <li><a href="index.html">Incial  <i class="fas fa-home"></i></a></li>
+                <li><a href="or.html">Orçamento  <i class="fa-solid fa-bookmark"></i></a></li>
+                <li><a href="recom.html">Recomendações  <i class="fa-solid fa-envelope"></i></a></li>
+                <li><a href="sobre.html">Sobre  <i class="fa fa-info-circle me-1"></i></a></li>
+               
+            </ul>
+            <a href="" class="action_btn">Comece</a>
+
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div> 
+        </div>  
+            <div class="dropdown_menu">
+                <li><a href="index.html">Incial  <i class="fas fa-home"></i></a></li>
+                <li><a href="or.html">Orçamento  <i class="fa-solid fa-bookmark"></i></a></li>
+                <li><a href="recom.html">Recomendações  <i class="fa-solid fa-envelope"></i></a></li>
+                <li><a href="sobre.html">Sobre  <i class="fa fa-info-circle me-1"></i></a></li>
+                <li>
+                    <a href="or.html" class="action_btn">Comece</a>
+                </li>
+            </div>
+    </header>
+   
+    <main>
+        <section id="hero">
+            <h1 class="text-light">Bem vindo,<h2 class="text-light">Precisa de uma ASSISTÊNCIA técnica OU PRODUTO Sem sair de casa?</h2></h1>
+            <p class="text-light">Temos serviços e profissionais formados diversas areas do ramo da tecnologia. Tais como:  <br>
+                 <span></span>
+            </p>
+            <a href="or.html" class="btn btn-primary">Coloca sua preocupação</a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+  <footer class="text-center text-light">
+    <p>&copy; 2024 <a href="index.html" style="color: orangered; ">Moz Assistentes</a>. Todos os direitos reservados.</p>
+  </footer>
+
+    <script>
+        const textodinamico = document.querySelector("p span");
+        const palavras = ["Montangem, Manutenção e reparação de computadores","Desenvolvedores de sistemas & Websites.", "Analistas de sistemas & Redes.", "Assistentes Tecnicos.", "Explicadores."];
+
+        let palavraindex =0;
+        let letraindex =0;
+        let delectando = false
+
+        const efeitoescrita = () =>{
+            const palavraactual = palavras[palavraindex];
+            const letraactual = palavraactual.substring(0, letraindex);
+        textodinamico.textContent = letraactual;
+        textodinamico.classList.add("parar-blink");
+
+        if(!delectando && letraindex < palavraactual.length){
+            // se a condicao for verdadeira, escreve a proxima letra
+            letraindex++;
+            setTimeout(efeitoescrita, 200);
+        } else if(delectando && letraindex > 0){
+            // se a condicao for verdadeira, remove a letra previa
+            letraindex--;
+            setTimeout(efeitoescrita, 100);
+        } else{
+            //se a palavra for deletada sera alterada para a proxima palavra
+            delectando = !delectando;
+            textodinamico.classList.remove("parar-blink");
+            palavraindex = !delectando ? (palavraindex + 1) % palavras.length : palavraindex;
+            setTimeout(efeitoescrita, 1200);
+        }
+        }
+
+        efeitoescrita();
+    </script>
+</body>
+</html>

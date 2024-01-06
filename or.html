@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moz Assistentes</title>
+    <link rel="stylesheet" href="or.css">
+    <script src="nav.js" defer></script>
+    <link rel="stylesheet" href="Bootstrap/css/bootstrap.min.css">
+    <script src="Bootstrap/js/bootstrap.min.js" defer></script>
+    <script src="fontawesome/js/all.min.js" defer></script>
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <style>
+        body{
+            background-color: hsl(244, 43%, 33%);
+            
+        }
+        .container{
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            overflow: hidden;
+            border-radius: 10px;
+        }
+        li a{
+            text-decoration: none;
+            color: aliceblue;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .action_btn{
+            text-decoration: none;
+        }
+        .navbar{
+            display: flex;
+            align-items: center;
+        }
+        button{
+            background-color: hsl(14, 91%, 50%);
+            padding: 10px 30px;
+            
+            color: white;
+            border: none;
+            margin-top: 20px;
+            border-radius: 10px;
+}
+    </style>
+</head>
+<body class="">
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <a href="nav.html">Moz Assistentess</a>
+            </div>
+            <ul class="links">
+                <li><a href="index.html">Incial  <i class="fas fa-home"></i></a></li>
+                <li><a href="or.html">Orçamento  <i class="fa-solid fa-bookmark"></i></a></li>
+                <li><a href="recom.html">Recomendações  <i class="fa-solid fa-envelope"></i></a></li>
+                <li><a href="sobre.html">Sobre  <i class="fa fa-info-circle me-1"></i></i></a></li>
+            </ul>
+            <a href="" class="action_btn">Comece</a>
+
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div> 
+        </div>  
+            <div class="dropdown_menu">
+                <li><a href="index.html">Incial  <i class="fas fa-home"></i></a></li>
+                <li><a href="or.html">Orçamento  <i class="fa-solid fa-bookmark"></i></a></li>
+                <li><a href="recom.html">Recomendações  <i class="fa-solid fa-envelope"></i></a></li>
+                <li><a href="sobre.html">Sobre  <i class="fa fa-info-circle me-1"></i></i></a></li>
+                <li>
+                    <a href="" class="action_btn">Comece</a>
+                </li>
+            </div>
+    </header>
+   
+    <main>
+        <section id="hero">
+            <div class="col-md-6">
+                <div class="row">
+                    <h2>Contacte-nos</h2>
+                    <p>Deixa sua mensagem e nos responderemos assim que possivel</p>
+                </div>
+                <div class="row">
+                    <form action="">
+                        <div>
+                            <span>
+                                <label for="nome">Nome</label><br>
+                                <input type="text" name="" id="nome" placeholder="Nome completo" required>
+                            </span>
+                            <span>
+                                <label for="email">Email</label><br>
+                                <input type="email" name="" id="email" placeholder="Email" required>
+                            </span>
+                        </div>
+                        <label for="mensagem">Tua mensagem</label><br>
+                        <textarea name="" id="mensagem" cols="30" rows="10" placeholder="Tua mensagem" required></textarea>
+                        <div class="d-flex">
+                            <button type="button" onclick="enviarparawhatsapp()">Whatsapp</button>
+                        <button type="button" onclick="enviarParaEmail()">Email</button>
+                        </div>
+                        
+                        
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-center text-light">
+        <p>&copy; 2024 <a href="index.html" style="color: orangered; ">Moz Assistentes</a>. Todos os direitos reservados.</p>
+      </footer>
+<script>
+    function enviarparawhatsapp() {
+    let numero = "+258833494370";
+
+    let nome = document.getElementById('nome').value;
+    let email = document.getElementById('email').value;
+    let mensagem = document.getElementById('mensagem').value;
+
+    let url = "https://wa.me/"+ numero + "?text="
+    + "Nome: " +nome+ "%0a"
+    + "Email: " +email+ "%0a"
+    + "Mensagem: " +mensagem+ "%0a%0a";
+
+    window.open(url, '_blank').focus();
+}
+function enviarParaEmail() {
+    // Substitua 'seu@email.com' pelo endereço de e-mail desejado
+    let enderecoEmail = 'mozassistentes@gmail.com';
+
+    let nome = document.getElementById('nome').value;
+    let email = document.getElementById('email').value;
+    let mensagem = document.getElementById('mensagem').value;
+
+    // Monta a URL com os parâmetros do email
+    let url = 'mailto:' + enderecoEmail + '?subject=' + encodeURIComponent('Assunto do Email') +
+        '&body=' + encodeURIComponent('Nome: ' + nome + '\nEmail: ' + email + '\nMensagem: ' + mensagem + '\n\n');
+
+    // Abre a URL no navegador
+    window.location.href = url;
+}
+</script>
+</script>
+<script src="nav.js"></script>
+    
+</body>
+</html>
