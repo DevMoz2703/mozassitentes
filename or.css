@@ -16,19 +16,17 @@ body{
     background-size: 400px;
     background-repeat: no-repeat;
 }
-section{
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-}
+
 li{
     list-style: none;
 }
 a{
     text-decoration: none;
-    color: #fff;
+    color: #240e8b;
     font-size: 1rem;
 }
 a:hover{
-    color: orangered;
+    color: #fff;
 }
 /*header*/
 header{
@@ -48,20 +46,20 @@ header{
 .navbar .logo a{
     font-size: 1.5rem;
     font-weight: bold;
-    color: orangered;
+    color: #240e8b;
 }
 .navbar .links{
     display: flex;
     gap: 2rem;
 }
 .navbar .toggle_btn{
-    color: orangered;
+    color: #240e8b;
     font-size: 1.5rem;
     cursor: pointer;
     display: none;
 }
 .action_btn{
-    background-color: orangered;
+    background-color: #240e8b;
     color: white;
     padding: 0.5rem 1rem;
     border: none;
@@ -119,7 +117,7 @@ section#hero{
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: #fff;
+    color: #240e8b;
 }
 
 #hero h1{
@@ -130,24 +128,28 @@ form div{
     display: flex;
     justify-content: space-between;
     gap: 5px;
-    color: orangered;
+    color: #240e8b;
+}
+input{
+    color: #240e8b;
 }
 span input{
     width: 80%;
     padding: 10px;
     margin: 5px 0 20px 0;
-    background:rgba(255, 255, 255, 0.1) ;
+    background:transparent;
     border-radius: 10px;
-    border: 1px solid orangered;
+    border: 1px solid #240e8b;
     outline: none;
+    color: hsl(266, 89%, 14%);
 }
 textarea{
     width: 80%;
-    
+    color: white;
     padding: 10px;
     margin-top: 5px;
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid orangered;
+    background: hsl(266, 89%, 14%) ;
+    border: 1px solid #240e8b;
     border-radius: 10px;
     outline: none;
 }
