@@ -48,20 +48,20 @@ header{
 .navbar .logo a{
     font-size: 1.5rem;
     font-weight: bold;
-    color: orangered;
+    color: #3c4cad;
 }
 .navbar .links{
     display: flex;
     gap: 2rem;
 }
 .navbar .toggle_btn{
-    color: orangered;
+    color: #3c4cad;
     font-size: 1.5rem;
     cursor: pointer;
     display: none;
 }
 .action_btn{
-    background-color: orangered;
+    background-color: #3c4cad;
     color: white;
     padding: 0.5rem 1rem;
     border: none;
