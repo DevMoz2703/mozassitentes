@@ -12,8 +12,12 @@
     <script src="fontawesome/js/all.min.js" defer></script>
     <link rel="stylesheet" href="fontawesome/css/all.min.css">
     <style>
+          @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,700&display=swap');
+        *{
+          font-family: 'Poppins', sans-serif;
+        }
         body{
-            background-color: hsl(244, 43%, 33%);
+            background-color: #ffb284;
             
         }
         .container{
@@ -24,7 +28,7 @@
         }
         li a{
             text-decoration: none;
-            color: aliceblue;
+            color: #240e8b;
             font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         }
         .action_btn{
@@ -35,7 +39,7 @@
             align-items: center;
         }
         button{
-            background-color: hsl(14, 91%, 50%);
+            background-color: #240e8b ;
             padding: 10px 30px;
             
             color: white;
@@ -86,7 +90,7 @@
                         <div>
                             <span>
                                 <label for="nome">Nome</label><br>
-                                <input type="text" name="" id="nome" placeholder="Nome completo" required>
+                                <input type="text" name="" id="nome" placeholder="Nome completo" style="color: #240e8b;" required>
                             </span>
                             <span>
                                 <label for="email">Email</label><br>
@@ -107,10 +111,11 @@
         </section>
     </main>
 
-    <footer class="text-center text-light">
-        <p>&copy; 2024 <a href="index.html" style="color: orangered; ">Moz Assistentes</a>. Todos os direitos reservados.</p>
+    <footer class="text-center text-primary">
+        <p>&copy; 2024 <a href="index.html" style="color: #240e8b; ">Moz Assistentes</a>. Todos os direitos reservados.</p>
       </footer>
-<script>
+      
+      <script>
     function enviarparawhatsapp() {
     let numero = "+258833494370";
 
