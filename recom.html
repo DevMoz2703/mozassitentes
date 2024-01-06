@@ -12,8 +12,13 @@
     <script src="fontawesome/js/all.min.js" defer></script>
     <link rel="stylesheet" href="fontawesome/css/all.min.css">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,700&display=swap');
+        *{
+          font-family: 'Poppins', sans-serif;
+        }
         body{
-            background-color: hsl(244, 43%, 33%);
+          background-color: #ffb284;
+          
             
         }
         .container{
@@ -23,9 +28,10 @@
             border-radius: 10px;
             
         }
-        li a{
+        
+          li a{
             text-decoration: none;
-            color: aliceblue;
+            color: #3c4cad;
             font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         }
         .action_btn{
@@ -71,7 +77,7 @@
       color: white;
       border: none;
       cursor: pointer;
-        border-radius: 10px;
+      border-radius: 10px;
     }
     input[type="submit"]:hover {
       background-color: #45a049;
@@ -79,7 +85,7 @@
     
     .recommendations {
       background-color: none;
-      color: #fff;
+      color: #240e8b;
       padding: 20px;
       margin-top: 20px;
     }
@@ -93,16 +99,19 @@
     th, td {
       border: 1px solid #ddd;
       padding: 8px;
-      text-align: left;
+      text-align: center;
+      color: #240e8b;
     }
 
     th {
-      background-color: #555;
+      background-color: #240e8b;
       color: #fff;
+      text-align: center;
+      
     }
 
     .delete-button {
-      background-color: #d9534f;
+      background-color: hsl(0, 70%, 20%);
       color: #fff;
       border: none;
       padding: 5px 10px;
@@ -141,15 +150,15 @@
    
    
     
-            <h1 class="text-center text-light">Deixe sua Recomendação</h1>
+            <h1 class="text-center" style="color: #240e8b;">Deixe sua Recomendação</h1>
 
         <form id="recommendationForm">
           <input type="text" id="name" placeholder="Seu nome" required>
           <textarea id="recommendation" placeholder="Sua recomendação" required></textarea>
-          <input type="submit" value="Enviar Recomendação" style="border-radius: 10px;">
+          <input type="submit" value="Enviar Recomendação">
         </form>
 
-        <div class="recommendations text-center text-light">
+        <div class="recommendations text-center ">
           <h2>Recomendações dos Usuários</h2>
           <table id="recommendationTable">
             <thead>
@@ -163,9 +172,7 @@
           </table>
         </div>
         
-        <footer class="text-center text-light">
-          <p>&copy; 2024 <a href="nav.html" style="color: orangered; ">Moz Assistentes</a>. Todos os direitos reservados.</p>
-        </footer>
+       
         
         
         <script>
@@ -248,4 +255,7 @@
 
     
 </body>
+<footer class="text-center text-primary">
+  <p>&copy; 2024 <a href="index.html" style="color: #240e8b; ">Moz Assistentes</a>. Todos os direitos reservados.</p>
+</footer>
 </html>
